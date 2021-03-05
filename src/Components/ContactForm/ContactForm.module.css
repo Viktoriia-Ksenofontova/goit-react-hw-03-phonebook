@@ -1,0 +1,40 @@
+.form {
+  position: relative;
+  border: 1px solid dimgray;
+  padding: 15px;
+}
+
+.formLabel {
+  display: block;
+  text-align: start;
+  margin-bottom: 10px;
+  height: 24px;
+}
+
+.formInput {
+  position: absolute;
+  width: 240px;
+  left: 80px;
+  border: none;
+  outline-color: rgb(172, 179, 201);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.formInput:focus {
+  transform: scale(1.05);
+}
+
+.formBtn {
+  padding: 8px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 2, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 2, 0.14), 0px 2px 1px -1px rgba(0, 0, 2, 0.12);
+  background-color: white;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.formBtn:hover {
+  background-color: rgb(228, 236, 243);
+}

@@ -1,0 +1,20 @@
+.filterLabel {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+
+  height: 24px;
+  text-align: start;
+}
+
+.filterInput {
+  position: absolute;
+  left: 165px;
+  border: none;
+  outline-color: rgb(172, 179, 201);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.filterInput:focus {
+  transform: scale(1.05);
+}

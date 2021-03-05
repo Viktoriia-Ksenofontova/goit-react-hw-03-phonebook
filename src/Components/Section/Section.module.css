@@ -1,0 +1,13 @@
+.section {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+  padding: 15px;
+  background-color: lightblue;
+}
+
+.sectionTitle {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
