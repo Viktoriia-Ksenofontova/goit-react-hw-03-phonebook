@@ -1,4 +1,6 @@
 import { Component } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 import { v4 as uuidv4 } from 'uuid';
 import ContactForm from './Components/ContactForm';
@@ -26,18 +28,23 @@ class App extends Component {
 
   formSubmitHandler = data => {
     if (this.state.contacts.find(({ name }) => name === data.name)) {
-      alert(`${data.name} is already in contacts.`);
-      return;
-    }
-    const newContact = {
-      id: uuidv4(),
-      name: data.name,
-      number: data.number,
-    };
+      return toast.info(`${data.name} is already in contacts.`, {
+        position: toast.POSITION.TOP_CENTER,
+      });
+    } else if (data.name !== '' && data.number !== '') {
+      const newContact = {
+        id: uuidv4(),
+        name: data.name,
+        number: data.number,
+      };
 
-    this.setState(({ contacts }) => ({
-      contacts: [newContact, ...contacts],
-    }));
+      return this.setState(({ contacts }) => ({
+        contacts: [newContact, ...contacts],
+      }));
+    }
+    return toast.warn(`All fields must be filled.`, {
+      position: toast.POSITION.TOP_CENTER,
+    });
   };
 
   changeFilter = e => {
@@ -82,6 +89,7 @@ class App extends Component {
             <h3>You have not contacts yet</h3>
           )}
         </Section>
+        <ToastContainer />
       </div>
     );
   }
