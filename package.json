@@ -1,6 +1,6 @@
 {
   "name": "goit-react-hw-03-phonebook",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "homepage": "https://viktoriia-ksenofontova.github.io/goit-react-hw-03-phonebook",
   "dependencies": {
@@ -13,7 +13,6 @@
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.3",
     "react-toastify": "^7.0.3",
-    "toastr": "^2.1.4",
     "uuid": "^8.3.2",
     "web-vitals": "^1.1.0"
   },
